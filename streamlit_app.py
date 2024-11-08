@@ -26,9 +26,9 @@ if uploaded_file is not None:
     )
     st.info(f"{target_column}を予測対象として予測モデルを作ります！")
 
-    # 'モデル作成開始'ボタンがクリックされるか、target_columnが変更されない場合
+    # 'モデル作成開始'ボタンがクリックされるか、ターゲットカラムが変更されない場合にifを実行
     if st.button('モデル作成開始') or st.session_state['target_column'] == target_column:
-        st.session_state['target'] = target_column
+        st.session_state['target_column'] = target_column
         x = df.copy()
         y = x[target_column]
         x = x.drop([target_column], axis=1)
