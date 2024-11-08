@@ -47,6 +47,6 @@ if uploaded_file is not None:
         column_names)
 
         fig = plt.figure(figsize=(5, 5))
-        sns.scatterplot(data=df, x=df_col1, y=df_col2)
+        sns.scatterplot(data=df, x=col_x, y=col_y)
         st.pyplot(fig)
 
