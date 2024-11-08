@@ -44,7 +44,7 @@ if uploaded_file is not None:
         col_x = st.selectbox('x軸にする列を選んでください',
         column_names)
         col_y = st.selectbox('y軸にする列を選んでください',
-        column_names)
+        column_names, index=1)
 
         fig = plt.figure(figsize=(5, 5))
         sns.scatterplot(data=df, x=col_x, y=col_y)
