@@ -1,7 +1,10 @@
-import time
+# import time
 
 import streamlit as st
 
+st.markdown("# データ分析アプリ")
+
+upl
 
 # キャッシュ機能のデモ
 @st.cache_data
