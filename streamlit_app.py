@@ -6,7 +6,7 @@ import seaborn as sns
 import japanize_matplotlib
 
 
-if 'target_columm' not in st.session_state:
+if 'target_column' not in st.session_state:
     st.session_state['target_column'] = 'ターゲット指定なし'
 
 
@@ -39,10 +39,8 @@ if uploaded_file is not None:
 
 
         st.markdown("### 散布図の確認")
-        col_x = st.selectbox('x軸にする列を選んでください',
-        column_names)
-        col_y = st.selectbox('y軸にする列を選んでください',
-        column_names, index=1)
+        col_x = st.selectbox('x軸にする列を選んでください', column_names)
+        col_y = st.selectbox('y軸にする列を選んでください', column_names, index=1)
 
         fig = plt.figure(figsize=(5, 5))
         sns.scatterplot(data=df, x=col_x, y=col_y)
